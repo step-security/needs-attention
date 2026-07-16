@@ -1,0 +1,43 @@
+{
+  "name": "needs-attention",
+  "version": "2.0.0",
+  "description": "A GitHub Action that flags issues that need attention.",
+  "author": "step-security",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/step-security/needs-attention/issues"
+  },
+  "homepage": "https://github.com/step-security/needs-attention#readme",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "build": "ncc build src/index.ts -o dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --write \"./**/*.{js,md,yml,ts}\"",
+    "format-check": "prettier --list-different \"./**/*.{js,md,yml,ts}\"",
+    "clean": "rm -rf ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/step-security/needs-attention.git"
+  },
+  "keywords": [
+    "actions",
+    "needs attention",
+    "labels",
+    "issue labels"
+  ],
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "axios": "^1.18.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.4",
+    "@vercel/ncc": "^0.36.1",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4"
+  }
+}
